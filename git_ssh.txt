@@ -17,3 +17,20 @@ Hi rodrigoms2004! You've successfully authenticated, but GitHub does not provide
 
 $ git remote add origin https://github.com/rodrigoms2004/node-course-2-web-server.git
 $ git push -u origin master
+
+
+###################
+HEROKU
+
+down vote
+You could try the following in your root directory:
+
+// initialize git for your project, add the changes and perform a commit
+
+git init
+git add .
+git commit -m "first commit"
+// create heroku app and push to heroku
+
+heroku create
+git push heroku master
