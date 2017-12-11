@@ -1,0 +1,19 @@
+$ ls -al ~/.ssh
+
+$ ssh-keygen -t rsa -b 4096 -C 'your-email'
+
+$ eval "$(ssh-agent -s)"
+Agent pid 5446
+
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /home/rodrigo/.ssh/id_rsa (/home/rodrigo/.ssh/id_rsa)
+
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Hi rodrigoms2004! You've successfully authenticated, but GitHub does not provide shell access.
+
+$ git remote add origin https://github.com/rodrigoms2004/node-course-2-web-server.git
+$ git push -u origin master
